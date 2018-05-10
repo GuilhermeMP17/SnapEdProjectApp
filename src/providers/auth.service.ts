@@ -27,7 +27,7 @@ export class AuthService {
     body.set('username', username);
     body.set('password', password);
 
-    var request = this.http.post<any>(/*environment.host_url +*/ '/token',
+    var request = this.http.post<any>(/*environment.host_url +*/ 'http://localhost:54967/api/security/token',
       body.toString(),
       { headers: headers });
 

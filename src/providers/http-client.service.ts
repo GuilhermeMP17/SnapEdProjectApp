@@ -9,8 +9,8 @@ export class HttpClientService {
 
   getToken(){
     let token = JSON.parse(localStorage.getItem("token"))
-
-    return token.access_token;
+    //console.log(token);
+    return token.access_token
   }
 
   get(url) {
@@ -21,6 +21,7 @@ export class HttpClientService {
       })
     };
     return this.http.get<any>(url, httpOptions);
+    console.log(httpOptions);
   }
 
   post(url, data) {

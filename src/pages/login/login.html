@@ -14,5 +14,30 @@
 
 
 <ion-content padding>
-
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <h2>Portal Codesp</h2>
+    <p class="text-muted">Entre com sua conta</p>
+    <div class="input-group mb-3">
+      <span class="input-group-addon"><i class="icon-user"></i></span>
+      <input type="text" class="form-control" placeholder="Usuário" [formControl]="loginForm.controls.username">
+    </div>
+    <div class="input-group mb-4">
+      <span class="input-group-addon"><i class="icon-lock"></i></span>
+      <input type="password" class="form-control" placeholder="Senha" [formControl]="loginForm.controls.password">
+    </div>
+    <div class="row mb-3">
+      <div class="col-6">
+        <button type="submit" class="btn btn-primary active px-4">Entrar</button>
+      </div>
+      <div class="col-6 text-right">
+        <!-- <a class="text-muted px-0" routerLinkActive="active" [routerLink]="['/dashboard']"> Cancelar </a>-->
+         <!--<a class="btn btn-link text-muted" routerLinkActive="active" [routerLink]="['/forgot-password']"> Esqueci minha senha </a>-->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <!--<a class="btn btn-primary active px-4 btn-block" routerLinkActive="active" [routerLink]="['/register']">Primeiro acesso</a>-->
+      </div>
+    </div>
+  </form>
 </ion-content>
