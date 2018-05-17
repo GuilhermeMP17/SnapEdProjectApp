@@ -15,6 +15,7 @@ import { UserProvider } from '../providers/user/user';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientService } from '../providers/http-client.service';
 import { AuthService } from '../providers/auth.service';
+import { IntroPageModule } from '../pages/intro/intro.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AuthService } from '../providers/auth.service';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    IntroPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

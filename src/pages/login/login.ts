@@ -46,6 +46,7 @@ export class LoginPage {
               
             if (login_response && login_response["access_token"]) {
                 localStorage.setItem('token', JSON.stringify(login_response));
+                alert("Login Realizado");
             }
           },
           err=> {

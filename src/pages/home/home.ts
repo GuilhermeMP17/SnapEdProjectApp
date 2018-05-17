@@ -30,7 +30,7 @@ export class HomePage {
         usersObservable.subscribe(
           data => {
             this.users = data;
-            console.log(this.users);
+            //console.log(this.users);
           },
           err => {
             
