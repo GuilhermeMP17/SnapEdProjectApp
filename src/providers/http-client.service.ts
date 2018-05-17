@@ -8,9 +8,11 @@ export class HttpClientService {
   constructor(private http: HttpClient) {}
 
   getToken(){
-    let token = JSON.parse(localStorage.getItem("token"))
-    //console.log(token);
-    return token.access_token
+    let token = JSON.parse(localStorage.getItem("token"))   
+    if(token){
+      return token.access_token
+    }
+    return "Faça seu Login"
   }
 
   get(url) {
@@ -21,7 +23,6 @@ export class HttpClientService {
       })
     };
     return this.http.get<any>(url, httpOptions);
-    console.log(httpOptions);
   }
 
   post(url, data) {

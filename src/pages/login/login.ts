@@ -43,7 +43,7 @@ export class LoginPage {
         isAuthenticate.subscribe(
           data=> {
             let login_response = data;
-    
+              
             if (login_response && login_response["access_token"]) {
                 localStorage.setItem('token', JSON.stringify(login_response));
             }
